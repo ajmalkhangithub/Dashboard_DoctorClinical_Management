@@ -1,0 +1,105 @@
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f4f6f8;
+}
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  padding: 15px;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
+.container {
+  display: flex;
+}
+.sidebar {
+  width: 220px;
+  background: #1e293b;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  z-index: 1000;
+}
+.sidebar h2 {
+  margin-bottom: 30px;
+}
+.sidebar a {
+  display: block;
+  margin: 15px 0;
+  color: #cbd5e1;
+  text-decoration: none;
+}
+.main {
+  flex: 1;
+  padding: 20px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.card {
+  flex: 1;
+  min-width: 100px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.table {
+  margin-top: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+th, td {
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+.chart-container {
+  margin-top: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    width: 220px;
+    transition: left 0.3s ease;
+  }
+  .sidebar.active {
+    left: 0;
+  }
+  .container {
+    flex-direction: column;
+  }
+ 
+}

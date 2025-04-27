@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthcare Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+
+<div class="container">
+  <div class="sidebar">
+    <h2>🩺 HealthCare</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Appointments</a>
+    <a href="#">Patients</a>
+    <a href="#">Doctors</a>
+    <a href="#">Reports</a>
+    <a href="#">Payment</a>
+    <a href="#">Schedule</a>
+    <a href="#">Invoice</a>
+    <a href="#">Logout</a>
+  </div>
+
+  <div class="main">
+    <div class="header">
+      <h1>Clinic Dashboard </h1>
+      <div>User Profile</div>
+    </div>
+
+    <div class="cards">
+      <div class="card"><h3>Total Appointments</h3><p>120</p></div>
+      <div class="card"><h3>Completed</h3><p>95</p></div>
+      <div class="card"><h3>Pending</h3><p>15</p></div>
+      <div class="card"><h3>Cancelled</h3><p>10</p></div>
+    </div>
+
+    <div class="table">
+      <h2>Appointments</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Patient Name</th><th>Date</th><th>Time</th><th>Status</th><th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Ali Raza</td><td>2025-04-10</td><td>10:30 AM</td><td>Pending</td><td>Edit | Delete</td></tr>
+          <tr><td>Sara Khan</td><td>2025-04-09</td><td>02:00 PM</td><td>Completed</td><td>Edit | Delete</td></tr>
+          <tr><td>Ajmal Khan</td><td>2025-04-15</td><td>03:00 PM</td><td>Cancelled</td><td>Edit | Delete</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="statusChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
